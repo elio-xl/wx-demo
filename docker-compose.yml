@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  wx-demo:
+    image: wx-demo:latest
+    container_name: wx-demo
+    restart: always
+    ports:
+     - "20400:20400"
+    build:
+       context: ./
+       dockerfile: Dockerfile
+    volumes:
+       - ./:/data/wx-demo
